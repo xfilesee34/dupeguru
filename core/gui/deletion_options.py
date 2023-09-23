@@ -77,6 +77,7 @@ class DeletionOptions(GUIObject):
         # When on a platform that doesn't implement it, calling os.symlink() (with the wrong number
         # of arguments) raises NotImplementedError, which allows us to gracefully check for the
         # feature.
+        return False
         try:
             os.symlink()
         except NotImplementedError:
